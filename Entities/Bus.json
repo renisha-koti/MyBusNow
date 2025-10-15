@@ -1,0 +1,52 @@
+{
+  "name": "Bus",
+  "type": "object",
+  "properties": {
+    "bus_number": {
+      "type": "string",
+      "description": "Bus identification number"
+    },
+    "route_number": {
+      "type": "string",
+      "description": "Associated route number"
+    },
+    "current_lat": {
+      "type": "number",
+      "description": "Current latitude"
+    },
+    "current_lng": {
+      "type": "number",
+      "description": "Current longitude"
+    },
+    "next_stop": {
+      "type": "string",
+      "description": "Next stop name"
+    },
+    "eta_minutes": {
+      "type": "number",
+      "description": "ETA to next stop in minutes"
+    },
+    "occupancy": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "description": "Bus occupancy level"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "delayed",
+        "on_time"
+      ],
+      "default": "on_time"
+    }
+  },
+  "required": [
+    "bus_number",
+    "route_number"
+  ]
+}
