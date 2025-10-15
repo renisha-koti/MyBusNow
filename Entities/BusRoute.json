@@ -1,0 +1,66 @@
+{
+  "name": "BusRoute",
+  "type": "object",
+  "properties": {
+    "route_number": {
+      "type": "string",
+      "description": "Bus route number"
+    },
+    "route_name": {
+      "type": "string",
+      "description": "Route name"
+    },
+    "route_name_telugu": {
+      "type": "string",
+      "description": "Route name in Telugu"
+    },
+    "start_point": {
+      "type": "string",
+      "description": "Starting point"
+    },
+    "end_point": {
+      "type": "string",
+      "description": "Ending point"
+    },
+    "stops": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "name_telugu": {
+            "type": "string"
+          },
+          "lat": {
+            "type": "number"
+          },
+          "lng": {
+            "type": "number"
+          },
+          "arrival_time": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "List of stops with coordinates"
+    },
+    "fare": {
+      "type": "number",
+      "description": "Base fare"
+    },
+    "frequency": {
+      "type": "string",
+      "description": "Bus frequency"
+    },
+    "color": {
+      "type": "string",
+      "description": "Route color for map display"
+    }
+  },
+  "required": [
+    "route_number",
+    "route_name"
+  ]
+}
